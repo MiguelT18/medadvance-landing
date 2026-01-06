@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@iconify-json/fluent-color": "^1.2.21",
+    "@iconify-json/icon-park-twotone": "^1.2.4",
+    "@iconify-json/material-symbols": "^1.2.50",
     "@iconify-json/mdi": "^1.2.3",
     "astro": "^5.16.6"
   },

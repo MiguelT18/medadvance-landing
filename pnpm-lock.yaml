@@ -11,6 +11,12 @@ importers:
       '@iconify-json/fluent-color':
         specifier: ^1.2.21
         version: 1.2.21
+      '@iconify-json/icon-park-twotone':
+        specifier: ^1.2.4
+        version: 1.2.4
+      '@iconify-json/material-symbols':
+        specifier: ^1.2.50
+        version: 1.2.50
       '@iconify-json/mdi':
         specifier: ^1.2.3
         version: 1.2.3
@@ -229,6 +235,12 @@ packages:
 
   '@iconify-json/fluent-color@1.2.21':
     resolution: {integrity: sha512-VETjGx7BMpVsCR3HV5g5t6oBGZ92XKzIRClS5xUvDn1YHAkQTF9OyF/aFdtxYOC8JROoI1SNO/Ql6jZeK7mroA==}
+
+  '@iconify-json/icon-park-twotone@1.2.4':
+    resolution: {integrity: sha512-AhnGngG6DxuIZMsz4FMrv0QWTRM/CZ3NnEeaceV6psKSgt/axW+hft7oQ6pIAFN9KB95Kp3hbJuhlhG3ao60eQ==}
+
+  '@iconify-json/material-symbols@1.2.50':
+    resolution: {integrity: sha512-71tjHR70h46LHtBFab3fAd2V/wPTO7JMV5lKnRn3IcF303LaFgAlO0BZeTJDcmCv9d0snRZmnoLZAJVD7/eisw==}
 
   '@iconify-json/mdi@1.2.3':
     resolution: {integrity: sha512-O3cLwbDOK7NNDf2ihaQOH5F9JglnulNDFV7WprU2dSoZu3h3cWH//h74uQAB87brHmvFVxIOkuBX2sZSzYhScg==}
@@ -1848,6 +1860,14 @@ snapshots:
     optional: true
 
   '@iconify-json/fluent-color@1.2.21':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/icon-park-twotone@1.2.4':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/material-symbols@1.2.50':
     dependencies:
       '@iconify/types': 2.0.0
 

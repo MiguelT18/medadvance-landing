@@ -1,0 +1,45 @@
+---
+interface Diferences {
+  title: string;
+  description: string;
+}
+
+const differences: Diferences[] = [
+  {
+    title: "Especialización Real",
+    description:
+      "Marketing médico que respeta los códigos deontológicos y la ética profesional.",
+  },
+  {
+    title: "Método MedScale",
+    description:
+      "Estrategia probada que escala consultorios de forma predecible y sostenible.",
+  },
+  {
+    title: "Enfoque en ROI",
+    description:
+      "No nos importan los likes, nos importa cuántos pacientes nuevos llegan a tu consulta.",
+  },
+  {
+    title: "Soporte VIP",
+    description:
+      "Comunicación directa y personalizada. Somos un socio estratégico, no solo un proveedor.",
+  },
+];
+---
+
+<section>
+  <h1>¿Por qué somos diferentes?</h1>
+
+  <ul>
+    {
+      differences.map((d, idx) => (
+        <li>
+          <span>0{idx + 1}</span>
+          <h2>{d.title}</h2>
+          <p>{d.description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</section>

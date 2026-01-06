@@ -36,21 +36,23 @@ const testimonials: Testimonial[] = [
 <section>
   <h1>Especialistas que ya transformaron su práctica</h1>
 
-  {
-    testimonials.map((t) => (
-      <div>
-        {Array.from({ length: t.rating }).map(() => (
-          <Icon name="mdi:star" width={24} height={24} />
-        ))}
-        <p>{t.quote}</p>
-        <div>
-          <Icon name="mdi:user-circle" width={32} height={32} />
+  <ul>
+    {
+      testimonials.map((t) => (
+        <li>
+          {Array.from({ length: t.rating }).map(() => (
+            <Icon name="mdi:star" width={24} height={24} />
+          ))}
+          <p>{t.quote}</p>
           <div>
-            <span>{t.author}</span>
-            <span>{t.expertise}</span>
+            <Icon name="mdi:user-circle" width={32} height={32} />
+            <div>
+              <span>{t.author}</span>
+              <span>{t.expertise}</span>
+            </div>
           </div>
-        </div>
-      </div>
-    ))
-  }
+        </li>
+      ))
+    }
+  </ul>
 </section>

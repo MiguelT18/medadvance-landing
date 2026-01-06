@@ -1,0 +1,62 @@
+---
+import PrimaryButton from "@components/ui/PrimaryButton.astro";
+import { Icon } from "astro-icon/components";
+
+interface FaqItems {
+  question: string;
+  answer: string;
+}
+
+const faqItems: FaqItems[] = [
+  {
+    question: "¿En cuánto tiempo veré resultados?",
+    answer:
+      "Los primeros resultados de visibilidad se ven en los primeros 30 días, pero la escala real comienza entre el mes 3 y 6.",
+  },
+  {
+    question: "¿Necesito invertir mucho en publicidad?",
+    answer:
+      "Adaptamos la estrategia a tu presupuesto, aunque recomendamos una inversión mínima para garantizar el flujo de pacientes.",
+  },
+  {
+    question: "¿Tengo que grabar videos yo mismo?",
+    answer:
+      "Te proporcionamos guiones y dirección para que sea sencillo, rápido y profesional.",
+  },
+  {
+    question: "¿Trabajan con cualquier especialidad?",
+    answer:
+      "Trabajamos con la mayoría de especialidades quirúrgicas y estéticas, previa evaluación de viabilidad.",
+  },
+];
+---
+
+<section>
+  <h1>Preguntas frecuentes</h1>
+
+  <ul>
+    {
+      faqItems.map((f) => (
+        <li>
+          <div>
+            <h3>{f.question}</h3>
+            <Icon name="material-symbols:play-arrow-rounded" />
+          </div>
+          <p>{f.answer}</p>
+        </li>
+      ))
+    }
+  </ul>
+
+  <article>
+    <h1>¿Aún tienes dudas?</h1>
+    <p>
+      Agenda una sesión estratégica sin costo y resolvemos todas tus
+      inquietudes.
+    </p>
+    <PrimaryButton>
+      <Icon name="mdi:register" />
+      Registrarme
+    </PrimaryButton>
+  </article>
+</section>

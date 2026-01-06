@@ -1,0 +1,28 @@
+---
+import PrimaryButton from "@components/ui/PrimaryButton.astro";
+import EbookPortraitImg from "@images/medical-marketing-ebook-cover.jpg";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+---
+
+<section>
+  <h1>Especialistas que ya transformaron su práctica</h1>
+
+  <Image
+    src={EbookPortraitImg}
+    alt="Portada del ebook oficial de MedAdvance"
+    width={500}
+    height={500}
+  />
+
+  <p>
+    Aprende el sistema exacto que utilizamos para posicionar especialistas y
+    aumentar su facturación sin invertir miles de dólares en publicidad inútil.
+    Regístrate ahora para obtener tu copia digital.
+  </p>
+
+  <PrimaryButton>
+    <Icon name="mdi:register" />
+    Registrarme
+  </PrimaryButton>
+</section>

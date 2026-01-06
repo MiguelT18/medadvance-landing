@@ -1,0 +1,59 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Benefits {
+  benefit: string;
+  description: string;
+}
+
+const benefits: Benefits[] = [
+  {
+    benefit: "Autoridad digital",
+    description:
+      "Posicionamos tu nombre como el referente #1 en tu especialidad dentro de tu ciudad.",
+  },
+  {
+    benefit: "Agenda llena",
+    description:
+      "Sistemas de captación automatizados que funcionan 24/7 para traerte pacientes calificados.",
+  },
+  {
+    benefit: "Contenido de valor",
+    description:
+      "Creamos contenido que educa a tus pacientes y elimina las objeciones antes de la cita.",
+  },
+  {
+    benefit: "Ahorro de tiempo",
+    description:
+      "Tú te encargas de tus pacientes, nosotros nos encargamos de todo el marketing.",
+  },
+  {
+    benefit: "Análisis de Datos",
+    description:
+      "Reportes mensuales claros sobre el crecimiento de tu comunidad y conversión de pacientes.",
+  },
+  {
+    benefit: "Estrategia Ética",
+    description:
+      "Marketing médico que respeta los códigos deontológicos y la ética profesional.",
+  },
+];
+---
+
+<section>
+  <h1>Beneficios de trabajar con nosotros</h1>
+
+  <ul>
+    {
+      benefits.map((b) => (
+        <li>
+          <div>
+            <Icon name="icon-park-twotone:check-one" width={30} height={30} />
+            {b.benefit}
+          </div>
+          <p>{b.description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</section>
