@@ -1,0 +1,21 @@
+---
+import { Icon } from "astro-icon/components";
+
+const reasons = [
+  "Te sientes estancado en las redes sociales.",
+  "No estás consiguiendo nuevos pacientes regularmente.",
+  "No generas los suficientes ingresos que te gustaría.",
+];
+---
+
+<section>
+  <Icon name="fluent-color:lightbulb-checkmark-32" width={36} height={36} />
+
+  <div>
+    <h1>Este evento es para ti si...</h1>
+
+    <ul>
+      {reasons.map((r) => <li>{r}</li>)}
+    </ul>
+  </div>
+</section>

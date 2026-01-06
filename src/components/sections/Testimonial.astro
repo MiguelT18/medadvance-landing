@@ -1,0 +1,56 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Testimonial {
+  rating: number;
+  quote: string;
+  author: string;
+  expertise: string;
+}
+
+const testimonials: Testimonial[] = [
+  {
+    rating: 5,
+    quote:
+      "'Desde que empezamos con MedAdvance, pasamos de tener 2 pacientes nuevos al mes a tener la agenda llena con 3 semanas de anticipación. El ROI ha sido increíble.'",
+    author: "Dr. Carlos Mendoza",
+    expertise: "cardiólogo",
+  },
+  {
+    rating: 4,
+    quote:
+      "'Desde que empezamos con MedAdvance, pasamos de tener 2 pacientes nuevos al mes a tener la agenda llena con 3 semanas de anticipación. El ROI ha sido increíble.'",
+    author: "Dr. Carlos Mendoza",
+    expertise: "cardiólogo",
+  },
+  {
+    rating: 5,
+    quote:
+      "'Desde que empezamos con MedAdvance, pasamos de tener 2 pacientes nuevos al mes a tener la agenda llena con 3 semanas de anticipación. El ROI ha sido increíble.'",
+    author: "Dr. Carlos Mendoza",
+    expertise: "cardiólogo",
+  },
+];
+---
+
+<section>
+  <h1>Especialistas que ya transformaron su práctica</h1>
+
+  {
+    testimonials.map((t) => (
+      <div>
+        {Array.from({ length: t.rating }).map(() => (
+          <Icon name="mdi:star" width={24} height={24} />
+        ))}
+        <p>{t.quote}</p>
+        <div>
+          <Icon name="mdi:user-circle" width={32} height={32} />
+          <div>
+            <span>{t.author}</span>
+            <span>{t.expertise}</span>
+          </div>
+        </div>
+      </div>
+    ))
+  }
+</section>
